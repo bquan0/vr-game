@@ -22,7 +22,7 @@ var prev_index = -1
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	var csv_file = File.new()
-	csv_file.open("res://points.csv", File.READ)
+	csv_file.open("res://radiationData/points.csv", File.READ)
 	csv_file.get_csv_line() # skip past first line of labels
 	
 	# copy all values of the csv file into an array

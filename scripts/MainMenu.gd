@@ -15,7 +15,12 @@ func _notification(what):
 func _on_StartButton_pressed():
 	# change scene to Level Select scene
 	Global.go_to_scene("res://scenes/LevelSelect.tscn")
+	
+func _on_HowToPlayButton_pressed():
+	Global.go_to_scene("res://scenes/HowToPlayScreen.tscn")
 
 func _on_QuitButton_pressed():
 	# send notification to quit game
 	get_tree().notification(MainLoop.NOTIFICATION_WM_QUIT_REQUEST)
+
+

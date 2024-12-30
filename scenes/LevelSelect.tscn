@@ -38,9 +38,9 @@ anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 margin_left = -447.0
-margin_top = -150.0
+margin_top = -170.0
 margin_right = 447.0
-margin_bottom = 203.0
+margin_bottom = 183.0
 custom_constants/separation = 74
 
 [node name="ScrollContainer" type="ScrollContainer" parent="HBoxContainer"]
@@ -127,6 +127,19 @@ margin_bottom = 684.0
 rect_scale = Vector2( 0.48, 0.48 )
 texture = ExtResource( 4 )
 
+[node name="MainMenuButton" type="Button" parent="."]
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = -125.0
+margin_top = -85.0
+margin_right = 125.0
+margin_bottom = -15.0
+theme = ExtResource( 2 )
+text = "Main Menu"
+
 [connection signal="mouse_entered" from="HBoxContainer/ScrollContainer/VBoxContainer/LevelButton1" to="." method="_on_LevelButton1_mouse_entered"]
 [connection signal="mouse_exited" from="HBoxContainer/ScrollContainer/VBoxContainer/LevelButton1" to="." method="_on_LevelButton1_mouse_exited"]
 [connection signal="pressed" from="HBoxContainer/ScrollContainer/VBoxContainer/LevelButton1" to="." method="_on_LevelButton1_pressed"]
+[connection signal="pressed" from="MainMenuButton" to="." method="_on_MainMenuButton_pressed"]

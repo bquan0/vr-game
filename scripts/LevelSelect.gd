@@ -8,3 +8,6 @@ func _on_LevelButton1_mouse_entered():
 
 func _on_LevelButton1_mouse_exited():
 	$HBoxContainer/ColorRect/TextureRect1.visible = false
+
+func _on_MainMenuButton_pressed():
+	Global.go_to_scene("res://scenes/MainMenu.tscn")

@@ -10,16 +10,16 @@
 [ext_resource path="res://textures/Wood2/Wood058_1K-JPG_Displacement.jpg" type="Texture" id=8]
 [ext_resource path="res://textures/Wood2/Wood058_1K-JPG_Color.jpg" type="Texture" id=9]
 [ext_resource path="res://textures/CeilingTile/OfficeCeiling001_1K-JPG_Displacement.jpg" type="Texture" id=10]
-[ext_resource path="res://textures/WhitePlaster/Plaster001_1K-JPG_Color.jpg" type="Texture" id=11]
-[ext_resource path="res://textures/WhitePlaster/Plaster001_1K-JPG_Roughness.jpg" type="Texture" id=12]
+[ext_resource path="res://textures/Plaster/Plaster001_1K-JPG_Color.jpg" type="Texture" id=11]
+[ext_resource path="res://textures/Plaster/Plaster001_1K-JPG_Roughness.jpg" type="Texture" id=12]
 [ext_resource path="res://textures/TiledFloor/Tiles051_1K-JPG_Color.jpg" type="Texture" id=13]
-[ext_resource path="res://textures/WhitePlaster/Plaster001_1K-JPG_Displacement.jpg" type="Texture" id=14]
+[ext_resource path="res://textures/Plaster/Plaster001_1K-JPG_Displacement.jpg" type="Texture" id=14]
 [ext_resource path="res://textures/CeilingTile/OfficeCeiling001_1K-JPG_Color.jpg" type="Texture" id=15]
-[ext_resource path="res://textures/WhitePlaster/Plaster001_1K-JPG_NormalGL.jpg" type="Texture" id=16]
+[ext_resource path="res://textures/Plaster/Plaster001_1K-JPG_NormalGL.jpg" type="Texture" id=16]
 [ext_resource path="res://textures/CeilingTile/OfficeCeiling001_1K-JPG_Roughness.jpg" type="Texture" id=17]
 [ext_resource path="res://textures/TiledFloor/Tiles051_1K-JPG_Displacement.jpg" type="Texture" id=18]
 [ext_resource path="res://textures/CeilingTile/OfficeCeiling001_1K-JPG_NormalGL.jpg" type="Texture" id=19]
-[ext_resource path="res://models/TwoRoomModel.obj" type="ArrayMesh" id=20]
+[ext_resource path="res://models/TwoRoomExpanded.obj" type="ArrayMesh" id=20]
 
 [sub_resource type="StyleBoxFlat" id=2]
 bg_color = Color( 0.439216, 0.439216, 0.439216, 0 )
@@ -541,11 +541,23 @@ anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 margin_left = -125.0
-margin_top = -90.0
+margin_top = -120.0
 margin_right = 125.0
-margin_bottom = 14.0
+margin_bottom = -50.0
 theme = ExtResource( 2 )
 text = "Start"
+
+[node name="HowToPlayButton" type="Button" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -125.0
+margin_top = -10.0
+margin_right = 125.0
+margin_bottom = 60.0
+theme = ExtResource( 2 )
+text = "How To Play"
 
 [node name="QuitButton" type="Button" parent="."]
 anchor_left = -0.000976563
@@ -553,9 +565,9 @@ anchor_top = 0.0333333
 anchor_right = -0.000976563
 anchor_bottom = 0.0333333
 margin_left = 388.0
-margin_top = 355.0
-margin_right = 636.0
-margin_bottom = 459.0
+margin_top = 380.0
+margin_right = 638.0
+margin_bottom = 450.0
 theme = ExtResource( 2 )
 text = "Quit"
 
@@ -620,4 +632,5 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2.61853, 2.34849, -2.54027 )
 transform = Transform( 1, 0, 0, 0, 0.551194, 0.834377, 0, -0.834377, 0.551194, 0.0895562, 6.06915, 11.8562 )
 
 [connection signal="pressed" from="StartButton" to="." method="_on_StartButton_pressed"]
+[connection signal="pressed" from="HowToPlayButton" to="." method="_on_HowToPlayButton_pressed"]
 [connection signal="pressed" from="QuitButton" to="." method="_on_QuitButton_pressed"]

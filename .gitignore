@@ -23,3 +23,5 @@ mono_crash.*.json
 *.ogg
 *.png
 *.jpg
+*.glb
+*.mtl
