@@ -13,6 +13,5 @@ func _process(delta):
 	if random < radiation:
 		play(SOUND_START)
 
-# set the timer's timeout based on how much radiation there is
 func set_radiation(value):
 	radiation = value
